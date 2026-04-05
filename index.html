@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20代営業職の転職相談｜あなたのキャリアを一緒に考えます</title>
+  <meta name="description" content="20代・営業職・転職を迷っている方へ。元税関→派遣営業→インフラエンジニア→人材紹介2年のキャリアアドバイザーが、あなたの転職を無料でサポートします。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:        #0b1d35;
+      --navy-mid:    #122848;
+      --navy-light:  #1a3a60;
+      --accent:      #f97316;
+      --accent-dark: #ea6608;
+      --teal:        #0ea5e9;
+      --text:        #1a2332;
+      --text-mid:    #4b5e74;
+      --text-light:  #7e92a8;
+      --bg:          #f4f7fb;
+      --bg-alt:      #ffffff;
+      --border:      #dde5ef;
+      --radius:      16px;
+      --radius-lg:   24px;
+      --shadow-sm:   0 2px 8px rgba(11,29,53,0.06);
+      --shadow:      0 8px 32px rgba(11,29,53,0.10);
+      --shadow-lg:   0 20px 60px rgba(11,29,53,0.16);
+    }
+
+    body {
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+    }
+    .logo span { color: var(--accent); }
+
+    .header-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 12px rgba(249,115,22,0.35);
+    }
+    .header-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    /* ===== HERO ===== */
+    .hero {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,165,233,0.18) 0%, transparent 60%),
+        linear-gradient(160deg, #0b1d35 0%, #0f2847 45%, #0d3060 100%);
+      color: #fff;
+      padding: 100px 24px 108px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(14,165,233,0.18);
+      border: 1px solid rgba(14,165,233,0.4);
+      border-radius: 999px;
+      padding: 7px 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 28px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #7dd3fc;
+    }
+    .hero-badge::before { content: '●'; font-size: 8px; color: #38bdf8; }
+
+    .hero h1 {
+      font-size: clamp(30px, 7vw, 52px);
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 24px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero h1 .highlight {
+      display: inline-block;
+      background: linear-gradient(90deg, #f97316, #fb923c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero h1 .underline-mark {
+      position: relative;
+      display: inline-block;
+    }
+    .hero h1 .underline-mark::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #f97316, #fbbf24);
+      border-radius: 2px;
+    }
+
+    .hero-sub {
+      font-size: clamp(15px, 2.5vw, 19px);
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 44px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.9;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      color: #fff;
+      font-weight: 800;
+      font-size: clamp(16px, 3vw, 20px);
+      padding: 20px 52px;
+      border-radius: 999px;
+      box-shadow: 0 8px 32px rgba(249,115,22,0.5), 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .hero-cta::after { content: '→'; font-size: 18px; }
+    .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(249,115,22,0.6), 0 4px 12px rgba(0,0,0,0.2); }
+
+    .hero-note {
+      margin-top: 18px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+    }
+
+    .hero-trust {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero-trust-item { text-align: center; }
+    .hero-trust-num {
+      display: block;
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .hero-trust-num span { color: var(--accent); }
+    .hero-trust-label { font-size: 12px; color: rgba(255,255,255,0.55); letter-spacing: 0.04em; }
+
+    /* ===== SECTIONS ===== */
+    .section { padding: 96px 24px; }
+    .section-alt { background: var(--bg-alt); }
+
+    .container { max-width: 740px; margin: 0 auto; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--teal);
+      border-radius: 1px;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 900;
+      margin-bottom: 48px;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+      color: var(--text);
+    }
+
+    /* ===== TARGET ===== */
+    .target-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .target-card {
+      background: var(--bg-alt);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px 28px;
+      text-align: center;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+      box-shadow: var(--shadow-sm);
+    }
+    .target-card:hover {
+      border-color: var(--teal);
+      box-shadow: 0 12px 40px rgba(14,165,233,0.15);
+      transform: translateY(-4px);
+    }
+
+    .target-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+      display: block;
+      line-height: 1;
+    }
+    .target-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 10px; color: var(--text); }
+    .target-card p { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+
+    .target-note {
+      background: linear-gradient(135deg, #eff8ff, #e0f2fe);
+      border-left: 4px solid var(--teal);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 15px;
+      color: #0369a1;
+      font-weight: 600;
+      line-height: 1.75;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ===== PROFILE ===== */
+    .profile-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      padding: 44px 40px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .profile-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy-light), #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(11,29,53,0.2);
+    }
+
+    .profile-name { font-size: 22px; font-weight: 900; letter-spacing: 0.02em; }
+    .profile-title {
+      font-size: 13px;
+      color: var(--text-mid);
+      margin-top: 4px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .profile-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .career-timeline { list-style: none; position: relative; padding-left: 32px; }
+    .career-timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--teal), var(--navy-light));
+      border-radius: 1px;
+    }
+
+    .career-timeline li {
+      position: relative;
+      padding: 0 0 28px 16px;
+      font-size: 15px;
+    }
+    .career-timeline li:last-child { padding-bottom: 0; }
+    .career-timeline li::before {
+      content: '';
+      position: absolute;
+      left: -22px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--teal);
+      border: 3px solid var(--bg-alt);
+      box-shadow: 0 0 0 2px var(--teal);
+    }
+
+    .career-label {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: #7dd3fc;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      letter-spacing: 0.08em;
+    }
+    .career-title { font-weight: 800; font-size: 16px; margin-bottom: 2px; }
+    .career-desc { color: var(--text-mid); font-size: 14px; margin-top: 2px; line-height: 1.7; }
+
+    .profile-message {
+      margin-top: 28px;
+      padding: 24px 28px;
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border-radius: var(--radius);
+      font-size: 15px;
+      color: #14532d;
+      line-height: 1.85;
+      border-left: 4px solid #22c55e;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 100%, rgba(14,165,233,0.15) 0%, transparent 60%),
+        linear-gradient(155deg, #0b1d35 0%, #0f2847 50%, #0d3060 100%);
+      color: #fff;
+      text-align: center;
+      padding: 96px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .cta-section .section-title { color: #fff; margin-bottom: 16px; }
+    .cta-section > .container > p {
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 40px;
+      font-size: clamp(15px, 3vw, 18px);
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #f97316, #fb923c);
+      color: #fff;
+      font-weight: 800;
+      font-size: clamp(17px, 3vw, 21px);
+      padding: 22px 60px;
+      border-radius: 999px;
+      box-shadow: 0 8px 32px rgba(249,115,22,0.5), 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .cta-btn::after { content: '→'; font-size: 18px; }
+    .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(249,115,22,0.6); }
+
+    .cta-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 28px;
+      margin-bottom: 44px;
+    }
+    .cta-list li {
+      list-style: none;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cta-list li::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: rgba(249,115,22,0.25);
+      border: 1.5px solid #f97316;
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 8l3.5 3.5 6.5-7' stroke='%23f97316' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      flex-shrink: 0;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+    .faq-item {
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .faq-item.open { border-color: var(--teal); box-shadow: 0 4px 20px rgba(14,165,233,0.12); }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 28px;
+      text-align: left;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      font-family: inherit;
+      transition: background 0.15s;
+    }
+    .faq-question:hover { background: #f8fafd; }
+
+    .faq-q-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: #7dd3fc;
+      font-size: 12px;
+      font-weight: 900;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      flex-shrink: 0;
+      letter-spacing: 0;
+    }
+
+    .faq-q-text { flex: 1; line-height: 1.6; }
+
+    .faq-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+      color: var(--text-light);
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--teal); }
+
+    .faq-answer {
+      display: none;
+      padding: 0 28px 22px;
+      font-size: 15px;
+      color: var(--text-mid);
+      line-height: 1.85;
+    }
+    .faq-answer.open { display: block; padding-top: 4px; }
+
+    .faq-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0 28px 18px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy);
+      color: #5a7a99;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 13px;
+    }
+    footer strong { color: rgba(255,255,255,0.85); display: block; margin-bottom: 8px; font-size: 15px; font-weight: 800; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 640px) {
+      .profile-card { padding: 28px 22px; }
+      .profile-header { flex-direction: column; text-align: center; }
+      .profile-title { justify-content: center; }
+      .cta-btn { padding: 20px 36px; }
+      .hero-cta { padding: 18px 32px; }
+      .hero-trust { gap: 20px; }
+    }
+
+    /* ===== SCROLL ANIMATION ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">20代営業転職<span>エージェント</span></div>
+    <a href="#FORM_URL_HERE" class="header-cta">無料相談する</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">20代・営業職の転職専門</div>
+    <h1>
+      転職、迷ってるなら<br>
+      <span class="underline-mark">まず話して</span><span class="highlight">みてください。</span>
+    </h1>
+    <p class="hero-sub">
+      あなたのキャリアを一緒に整理して、<br>
+      「次の一手」を見つけるお手伝いをします。
+    </p>
+    <a href="#FORM_URL_HERE" class="hero-cta">無料で転職相談を申し込む</a>
+    <p class="hero-note">完全無料・オンライン対応・相談だけでもOK</p>
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <span class="hero-trust-num">100<span>%</span></span>
+        <span class="hero-trust-label">完全無料</span>
+      </div>
+      <div class="hero-trust-item">
+        <span class="hero-trust-num">2<span>年+</span></span>
+        <span class="hero-trust-label">支援実績</span>
+      </div>
+      <div class="hero-trust-item">
+        <span class="hero-trust-num">20<span>代</span></span>
+        <span class="hero-trust-label">営業職専門</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow fade-in">こんな人に向いています</p>
+      <h2 class="section-title fade-in">こんな方のお役に立てます</h2>
+
+      <div class="target-grid">
+        <div class="target-card fade-in">
+          <div class="target-icon">🎯</div>
+          <h3>20代の方</h3>
+          <p>第二新卒・社会人3〜7年目の転職をサポート</p>
+        </div>
+        <div class="target-card fade-in">
+          <div class="target-icon">💼</div>
+          <h3>営業職の方</h3>
+          <p>営業経験を活かした転職・異職種転換どちらも対応</p>
+        </div>
+        <div class="target-card fade-in">
+          <div class="target-icon">🤔</div>
+          <h3>転職を迷っている方</h3>
+          <p>「転職すべきか」の壁打ち相手としてもOK</p>
+        </div>
+      </div>
+
+      <div class="target-note fade-in">
+        「転職すると決めていなくても大丈夫です。まず現状を整理するだけでも、相談してみてください。」
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="section">
+    <div class="container">
+      <p class="section-eyebrow fade-in">自己紹介</p>
+      <h2 class="section-title fade-in">担当者のキャリア</h2>
+
+      <div class="profile-card fade-in">
+        <div class="profile-header">
+          <div class="profile-avatar">👤</div>
+          <div>
+            <div class="profile-name">キャリアアドバイザー</div>
+            <div class="profile-title">人材紹介 / 転職支援 2年</div>
+          </div>
+        </div>
+
+        <ul class="career-timeline">
+          <li>
+            <span class="career-label">STEP 1</span>
+            <div class="career-title">税関勤務</div>
+            <div class="career-desc">公的機関でのキャリアスタート。組織のルールや仕組みを徹底的に学ぶ。</div>
+          </li>
+          <li>
+            <span class="career-label">STEP 2</span>
+            <div class="career-title">派遣営業</div>
+            <div class="career-desc">人と仕事をマッチングする営業職を経験。求職者と企業、両方の視点を身につける。</div>
+          </li>
+          <li>
+            <span class="career-label">STEP 3</span>
+            <div class="career-title">インフラエンジニア</div>
+            <div class="career-desc">未経験からIT業界へ転身。自分自身も異業種転職を経験済み。</div>
+          </li>
+          <li>
+            <span class="career-label">STEP 4</span>
+            <div class="career-title">人材紹介（現在・2年）</div>
+            <div class="career-desc">20代・営業職を中心とした転職支援に特化。リアルな転職市場を熟知。</div>
+          </li>
+        </ul>
+
+        <div class="profile-message">
+          私自身も転職を経験しており、「転職を迷う気持ち」はよくわかります。<br>
+          正解を押し付けるのではなく、あなた自身が納得できるキャリアを一緒に考えることを大切にしています。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <p class="section-eyebrow fade-in" style="color:#7dd3fc; justify-content:center;">無料相談受付中</p>
+      <h2 class="section-title fade-in">まずは無料で相談してみませんか？</h2>
+      <p class="fade-in">話すだけでも、頭が整理されます。</p>
+      <ul class="cta-list fade-in">
+        <li>完全無料</li>
+        <li>オンライン対応</li>
+        <li>相談だけでもOK</li>
+        <li>押し売り一切なし</li>
+      </ul>
+      <a href="#FORM_URL_HERE" class="cta-btn fade-in">無料転職相談を申し込む</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="section-eyebrow fade-in">よくある質問</p>
+      <h2 class="section-title fade-in">FAQ</h2>
+
+      <ul class="faq-list">
+        <li class="faq-item fade-in">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-label">Q</span>
+            <span class="faq-q-text">転職するか迷っている段階でも相談できますか？</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-divider"></div>
+            もちろんです。「転職すべきかどうか」の壁打ち相手としてのご利用も大歓迎です。現状を整理するだけでも、次のアクションが見えてきます。転職を決めてからでないと相談できない、ということは一切ありません。
+          </div>
+        </li>
+        <li class="faq-item fade-in">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-label">Q</span>
+            <span class="faq-q-text">費用はかかりますか？</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-divider"></div>
+            相談・サポートは完全無料です。転職先が決まった場合でも、求職者の方からいただく費用は一切ありません。費用は採用企業側からいただく仕組みになっています。安心してご相談ください。
+          </div>
+        </li>
+        <li class="faq-item fade-in">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-q-label">Q</span>
+            <span class="faq-q-text">営業以外の仕事に転職したいのですが、対応できますか？</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-divider"></div>
+            対応可能です。私自身も営業職からエンジニアへの異業種転職を経験しており、未経験分野へのチャレンジについてもリアルな視点でお話しできます。「営業を続けるか変えるか」含めて、一緒に考えましょう。
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="cta-section" style="padding: 56px 20px;">
+    <div class="container">
+      <p style="font-size: clamp(18px, 4vw, 24px); font-weight: 800; margin-bottom: 24px;">
+        転職の第一歩、一緒に踏み出しましょう。
+      </p>
+      <a href="#FORM_URL_HERE" class="cta-btn">無料相談を申し込む（Google Forms）</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <strong>20代営業転職エージェント</strong>
+    <p>© 2026 All rights reserved.</p>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('open');
+
+        // close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-answer').classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        // toggle clicked
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Scroll fade-in
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
