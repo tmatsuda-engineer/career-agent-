@@ -3,477 +3,733 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>20代営業職の転職相談｜あなたのキャリアを一緒に考えます</title>
-  <meta name="description" content="20代・営業職・転職を迷っている方へ。元税関→派遣営業→インフラエンジニア→人材紹介2年のキャリアアドバイザーが、あなたの転職を無料でサポートします。">
+  <title>COMPASS Career｜あなたのキャリアに、正しい方角を。</title>
+  <meta name="description" content="20代・営業職の転職支援に特化したキャリアエージェント。強み・やりがいの言語化から、3年後・5年後を見据えた中長期キャリア支援まで。完全無料・オンライン対応。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:        #0b1d35;
-      --navy-mid:    #122848;
-      --navy-light:  #1a3a60;
-      --accent:      #f97316;
-      --accent-dark: #ea6608;
-      --teal:        #0ea5e9;
-      --text:        #1a2332;
-      --text-mid:    #4b5e74;
-      --text-light:  #7e92a8;
-      --bg:          #f4f7fb;
-      --bg-alt:      #ffffff;
-      --border:      #dde5ef;
-      --radius:      16px;
-      --radius-lg:   24px;
-      --shadow-sm:   0 2px 8px rgba(11,29,53,0.06);
-      --shadow:      0 8px 32px rgba(11,29,53,0.10);
-      --shadow-lg:   0 20px 60px rgba(11,29,53,0.16);
+      --navy:       #0c1f3f;
+      --navy-mid:   #152d55;
+      --navy-light: #1e3f73;
+      --gold:       #c9943a;
+      --gold-light: #e8b96a;
+      --gold-pale:  #f5e9d0;
+      --gold-line:  #d4a84b;
+      --cream:      #faf8f3;
+      --cream-mid:  #f0ead8;
+      --white:      #ffffff;
+      --text:       #1a2332;
+      --text-mid:   #4a5568;
+      --text-light: #7a8ca0;
+      --border:     #e2d9c8;
+      --radius:     14px;
+      --radius-lg:  22px;
+      --shadow-sm:  0 2px 10px rgba(12,31,63,0.06);
+      --shadow:     0 8px 32px rgba(12,31,63,0.10);
+      --shadow-lg:  0 24px 64px rgba(12,31,63,0.14);
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
       color: var(--text);
-      background: var(--bg);
-      line-height: 1.75;
+      background: var(--cream);
+      line-height: 1.8;
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
     }
 
     a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; }
+
+    /* ===== UTILITIES ===== */
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .container--wide { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    .section { padding: 100px 0; }
+    .section--cream { background: var(--cream); }
+    .section--white { background: var(--white); }
+    .section--navy  { background: var(--navy); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .eyebrow::before, .eyebrow::after {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold-line);
+    }
+
+    .section-title {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 900;
+      line-height: 1.35;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: clamp(15px, 2.5vw, 17px);
+      color: var(--text-mid);
+      line-height: 1.9;
+      margin-bottom: 56px;
+      max-width: 600px;
+    }
 
     /* ===== HEADER ===== */
     header {
-      background: rgba(255,255,255,0.95);
+      background: rgba(12,31,63,0.97);
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 24px;
+      padding: 16px 24px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 200;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .logo {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--navy);
-      letter-spacing: 0.04em;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
     }
-    .logo span { color: var(--accent); }
+    .logo-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.12em;
+      line-height: 1;
+    }
+    .logo-main span { color: var(--gold-light); }
+    .logo-sub {
+      font-size: 9px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
 
     .header-cta {
-      background: var(--accent);
-      color: #fff;
-      padding: 10px 22px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy);
+      padding: 11px 24px;
       border-radius: 999px;
       font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 4px 12px rgba(249,115,22,0.35);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      transition: opacity 0.2s, transform 0.15s;
+      box-shadow: 0 4px 14px rgba(201,148,58,0.4);
     }
-    .header-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .header-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 
     /* ===== HERO ===== */
     .hero {
       background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,165,233,0.18) 0%, transparent 60%),
-        linear-gradient(160deg, #0b1d35 0%, #0f2847 45%, #0d3060 100%);
-      color: #fff;
-      padding: 100px 24px 108px;
+        radial-gradient(ellipse 100% 80% at 50% -10%, rgba(201,148,58,0.12) 0%, transparent 55%),
+        linear-gradient(170deg, #07162d 0%, #0c1f3f 40%, #112849 100%);
+      color: var(--white);
+      padding: 120px 24px 112px;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-    .hero::before {
-      content: '';
+
+    /* compass decoration */
+    .hero-compass {
       position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: min(600px, 90vw);
+      height: min(600px, 90vw);
+      border: 1px solid rgba(201,148,58,0.08);
+      border-radius: 50%;
       pointer-events: none;
     }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(14,165,233,0.18);
-      border: 1px solid rgba(14,165,233,0.4);
-      border-radius: 999px;
-      padding: 7px 20px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 28px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #7dd3fc;
-    }
-    .hero-badge::before { content: '●'; font-size: 8px; color: #38bdf8; }
-
-    .hero h1 {
-      font-size: clamp(30px, 7vw, 52px);
-      font-weight: 900;
-      line-height: 1.35;
-      margin-bottom: 24px;
-      letter-spacing: 0.01em;
-    }
-
-    .hero h1 .highlight {
-      display: inline-block;
-      background: linear-gradient(90deg, #f97316, #fb923c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero h1 .underline-mark {
-      position: relative;
-      display: inline-block;
-    }
-    .hero h1 .underline-mark::after {
+    .hero-compass::before {
       content: '';
       position: absolute;
-      bottom: 0px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #f97316, #fbbf24);
-      border-radius: 2px;
+      inset: 20px;
+      border: 1px solid rgba(201,148,58,0.05);
+      border-radius: 50%;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(201,148,58,0.12);
+      border: 1px solid rgba(201,148,58,0.3);
+      border-radius: 999px;
+      padding: 8px 22px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.1em;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: clamp(32px, 7.5vw, 58px);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+      position: relative;
+    }
+
+    .hero-catch {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(16px, 3vw, 22px);
+      font-weight: 400;
+      color: var(--gold-light);
+      letter-spacing: 0.12em;
+      margin-bottom: 32px;
+      position: relative;
     }
 
     .hero-sub {
-      font-size: clamp(15px, 2.5vw, 19px);
-      color: rgba(255,255,255,0.78);
-      margin-bottom: 44px;
+      font-size: clamp(15px, 2.5vw, 18px);
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 52px;
       max-width: 560px;
       margin-left: auto;
       margin-right: auto;
-      line-height: 1.9;
+      line-height: 2;
+      position: relative;
     }
+
+    .hero-cta-wrap { position: relative; }
 
     .hero-cta {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: linear-gradient(135deg, #f97316, #fb923c);
-      color: #fff;
-      font-weight: 800;
+      gap: 12px;
+      background: linear-gradient(135deg, #c9943a, #e8b96a);
+      color: var(--navy);
+      font-weight: 900;
       font-size: clamp(16px, 3vw, 20px);
-      padding: 20px 52px;
+      padding: 22px 56px;
       border-radius: 999px;
-      box-shadow: 0 8px 32px rgba(249,115,22,0.5), 0 2px 8px rgba(0,0,0,0.15);
-      transition: transform 0.2s, box-shadow 0.2s;
-      letter-spacing: 0.02em;
-    }
-    .hero-cta::after { content: '→'; font-size: 18px; }
-    .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(249,115,22,0.6), 0 4px 12px rgba(0,0,0,0.2); }
-
-    .hero-note {
-      margin-top: 18px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.5);
+      box-shadow: 0 8px 36px rgba(201,148,58,0.55), 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.25s, box-shadow 0.25s;
       letter-spacing: 0.04em;
     }
+    .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 16px 52px rgba(201,148,58,0.65); }
+    .hero-cta-arrow {
+      width: 22px;
+      height: 22px;
+      background: rgba(12,31,63,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
 
-    .hero-trust {
+    .hero-note { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+
+    .hero-stats {
       display: flex;
       justify-content: center;
-      gap: 32px;
+      gap: 0;
       flex-wrap: wrap;
-      margin-top: 56px;
-      padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 72px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(201,148,58,0.2);
+      position: relative;
     }
-    .hero-trust-item { text-align: center; }
-    .hero-trust-num {
-      display: block;
-      font-size: clamp(24px, 5vw, 36px);
-      font-weight: 900;
-      color: #fff;
+
+    .hero-stat {
+      padding: 0 40px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .hero-stat:last-child { border-right: none; }
+
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 6vw, 44px);
+      font-weight: 700;
+      color: var(--gold-light);
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
-    .hero-trust-num span { color: var(--accent); }
-    .hero-trust-label { font-size: 12px; color: rgba(255,255,255,0.55); letter-spacing: 0.04em; }
-
-    /* ===== SECTIONS ===== */
-    .section { padding: 96px 24px; }
-    .section-alt { background: var(--bg-alt); }
-
-    .container { max-width: 740px; margin: 0 auto; }
-
-    .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--teal);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .section-eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 24px;
-      height: 2px;
-      background: var(--teal);
-      border-radius: 1px;
-    }
-
-    .section-title {
-      font-size: clamp(24px, 5vw, 36px);
-      font-weight: 900;
-      margin-bottom: 48px;
-      line-height: 1.35;
-      letter-spacing: 0.01em;
-      color: var(--text);
-    }
+    .hero-stat-num sup { font-size: 0.55em; vertical-align: super; }
+    .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; }
 
     /* ===== TARGET ===== */
     .target-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin-bottom: 36px;
+      margin-bottom: 40px;
     }
 
     .target-card {
-      background: var(--bg-alt);
+      background: var(--white);
       border: 1.5px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 32px 24px 28px;
+      padding: 36px 28px 30px;
       text-align: center;
-      transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.25s;
       box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .target-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      opacity: 0;
+      transition: opacity 0.3s;
     }
     .target-card:hover {
-      border-color: var(--teal);
-      box-shadow: 0 12px 40px rgba(14,165,233,0.15);
-      transform: translateY(-4px);
+      border-color: var(--gold-line);
+      box-shadow: 0 12px 40px rgba(12,31,63,0.12);
+      transform: translateY(-5px);
     }
+    .target-card:hover::before { opacity: 1; }
 
     .target-icon {
-      font-size: 40px;
-      margin-bottom: 16px;
+      font-size: 42px;
+      margin-bottom: 18px;
       display: block;
       line-height: 1;
     }
-    .target-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 10px; color: var(--text); }
-    .target-card p { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+    .target-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 10px; }
+    .target-card p { font-size: 14px; color: var(--text-mid); line-height: 1.75; }
 
     .target-note {
-      background: linear-gradient(135deg, #eff8ff, #e0f2fe);
-      border-left: 4px solid var(--teal);
-      padding: 20px 24px;
+      background: linear-gradient(135deg, #f7f3ea, #ede6d4);
+      border-left: 4px solid var(--gold-line);
+      padding: 22px 28px;
       border-radius: 0 var(--radius) var(--radius) 0;
       font-size: 15px;
-      color: #0369a1;
+      color: #6b4f1a;
       font-weight: 600;
-      line-height: 1.75;
+      line-height: 1.8;
       box-shadow: var(--shadow-sm);
     }
 
-    /* ===== PROFILE ===== */
-    .profile-card {
-      background: var(--bg-alt);
+    /* ===== FEATURES ===== */
+    .features-list { display: flex; flex-direction: column; gap: 28px; }
+
+    .feature-item {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 28px;
+      align-items: start;
+      background: var(--white);
       border-radius: var(--radius-lg);
-      padding: 44px 40px;
-      box-shadow: var(--shadow-lg);
+      padding: 36px 36px 36px 32px;
+      box-shadow: var(--shadow);
       border: 1px solid var(--border);
+      transition: box-shadow 0.3s, transform 0.25s;
+    }
+    .feature-item:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
     }
 
-    .profile-header {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      margin-bottom: 32px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .profile-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--navy-light), #1d4ed8);
+    .feature-num {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 36px;
       flex-shrink: 0;
-      box-shadow: 0 8px 24px rgba(11,29,53,0.2);
+    }
+    .feature-num-inner {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
     }
 
-    .profile-name { font-size: 22px; font-weight: 900; letter-spacing: 0.02em; }
-    .profile-title {
-      font-size: 13px;
-      color: var(--text-mid);
-      margin-top: 4px;
-      font-weight: 600;
+    .feature-body h3 {
+      font-size: 19px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .feature-body p { font-size: 15px; color: var(--text-mid); line-height: 1.85; }
+
+    /* ===== PROFILE ===== */
+    .profile-wrap {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .profile-photo-area { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--gold-line);
+      box-shadow: 0 8px 32px rgba(12,31,63,0.2);
+      background: linear-gradient(135deg, var(--navy-mid), var(--navy-light));
       display: flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
+      flex-shrink: 0;
     }
-    .profile-title::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-
-    .career-timeline { list-style: none; position: relative; padding-left: 32px; }
-    .career-timeline::before {
-      content: '';
-      position: absolute;
-      left: 10px;
-      top: 8px;
-      bottom: 8px;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--teal), var(--navy-light));
-      border-radius: 1px;
+    .profile-photo-placeholder {
+      font-size: 64px;
+      line-height: 1;
+      opacity: 0.7;
     }
 
-    .career-timeline li {
-      position: relative;
-      padding: 0 0 28px 16px;
-      font-size: 15px;
-    }
-    .career-timeline li:last-child { padding-bottom: 0; }
-    .career-timeline li::before {
-      content: '';
-      position: absolute;
-      left: -22px;
-      top: 8px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--teal);
-      border: 3px solid var(--bg-alt);
-      box-shadow: 0 0 0 2px var(--teal);
-    }
-
-    .career-label {
-      display: inline-block;
+    .profile-badge {
       background: linear-gradient(135deg, var(--navy), var(--navy-light));
-      color: #7dd3fc;
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 999px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .profile-info h3 { font-size: 28px; font-weight: 900; margin-bottom: 4px; }
+    .profile-info .profile-title {
+      font-size: 14px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 28px;
+      letter-spacing: 0.04em;
+    }
+
+    .story-block { display: flex; flex-direction: column; gap: 20px; }
+
+    .story-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .story-period {
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      color: var(--gold-light);
       font-size: 10px;
       font-weight: 800;
-      padding: 3px 10px;
-      border-radius: 4px;
-      margin-bottom: 6px;
-      letter-spacing: 0.08em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.06em;
+      margin-top: 3px;
+      white-space: nowrap;
     }
-    .career-title { font-weight: 800; font-size: 16px; margin-bottom: 2px; }
-    .career-desc { color: var(--text-mid); font-size: 14px; margin-top: 2px; line-height: 1.7; }
+
+    .story-item p { font-size: 15px; color: var(--text-mid); line-height: 1.85; }
+    .story-item p strong { color: var(--text); font-weight: 800; }
 
     .profile-message {
       margin-top: 28px;
       padding: 24px 28px;
-      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      background: linear-gradient(135deg, #f7f3ea, #ede6d4);
       border-radius: var(--radius);
       font-size: 15px;
-      color: #14532d;
-      line-height: 1.85;
-      border-left: 4px solid #22c55e;
+      color: #5c4010;
+      line-height: 1.9;
+      border-left: 4px solid var(--gold-line);
+      font-weight: 500;
     }
+
+    /* ===== CASES ===== */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .case-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.25s;
+    }
+    .case-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+
+    .case-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .case-tag {
+      display: inline-block;
+      background: var(--gold-pale);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 4px;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+
+    .case-transition {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .case-from, .case-to {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .case-to { background: var(--navy); color: var(--gold-light); border-color: var(--navy); }
+    .case-arrow { color: var(--gold); font-size: 18px; font-weight: 900; }
+
+    .case-voice {
+      font-size: 14px;
+      color: var(--text-mid);
+      font-style: italic;
+      margin-bottom: 16px;
+      line-height: 1.75;
+      padding: 14px 18px;
+      background: var(--cream);
+      border-radius: 8px;
+      border-left: 3px solid var(--gold-line);
+    }
+    .case-voice::before { content: '「'; }
+    .case-voice::after  { content: '」'; }
+
+    .case-result {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .case-result::before {
+      content: '→ ';
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    /* ===== FLOW ===== */
+    .flow-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+    .flow-list::before {
+      content: '';
+      position: absolute;
+      left: 31px;
+      top: 32px;
+      bottom: 32px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), var(--gold-pale));
+    }
+
+    .flow-item {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      padding: 28px 0;
+      position: relative;
+    }
+
+    .flow-num {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--gold-line);
+      box-shadow: 0 4px 16px rgba(12,31,63,0.2);
+      position: relative;
+      z-index: 1;
+    }
+    .flow-num-inner {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .flow-body { padding-top: 10px; }
+    .flow-step {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .flow-body h3 { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
+    .flow-body p { font-size: 14px; color: var(--text-mid); line-height: 1.75; }
 
     /* ===== CTA SECTION ===== */
     .cta-section {
       background:
-        radial-gradient(ellipse 70% 50% at 50% 100%, rgba(14,165,233,0.15) 0%, transparent 60%),
-        linear-gradient(155deg, #0b1d35 0%, #0f2847 50%, #0d3060 100%);
-      color: #fff;
+        radial-gradient(ellipse 80% 60% at 50% 110%, rgba(201,148,58,0.14) 0%, transparent 60%),
+        linear-gradient(160deg, #07162d 0%, #0c1f3f 50%, #112849 100%);
+      color: var(--white);
       text-align: center;
-      padding: 96px 24px;
+      padding: 112px 24px;
       position: relative;
       overflow: hidden;
     }
     .cta-section::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 700px;
+      border: 1px solid rgba(201,148,58,0.07);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px; height: 500px;
+      border: 1px solid rgba(201,148,58,0.05);
+      border-radius: 50%;
       pointer-events: none;
     }
 
-    .cta-section .section-title { color: #fff; margin-bottom: 16px; }
-    .cta-section > .container > p {
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 40px;
-      font-size: clamp(15px, 3vw, 18px);
+    .cta-inner { position: relative; }
+
+    .cta-section .eyebrow { justify-content: center; }
+    .cta-section .section-title { color: var(--white); }
+
+    .cta-section .section-lead {
+      color: rgba(255,255,255,0.65);
+      margin: 0 auto 52px;
+    }
+
+    .cta-checks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 32px;
+      margin-bottom: 52px;
+    }
+    .cta-check {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+    }
+    .cta-check-icon {
+      width: 20px;
+      height: 20px;
+      background: rgba(201,148,58,0.2);
+      border: 1.5px solid var(--gold-line);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      color: var(--gold-light);
     }
 
     .cta-btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: linear-gradient(135deg, #f97316, #fb923c);
-      color: #fff;
-      font-weight: 800;
-      font-size: clamp(17px, 3vw, 21px);
-      padding: 22px 60px;
+      gap: 12px;
+      background: linear-gradient(135deg, #c9943a, #e8b96a);
+      color: var(--navy);
+      font-weight: 900;
+      font-size: clamp(17px, 3vw, 22px);
+      padding: 24px 64px;
       border-radius: 999px;
-      box-shadow: 0 8px 32px rgba(249,115,22,0.5), 0 2px 8px rgba(0,0,0,0.15);
-      transition: transform 0.2s, box-shadow 0.2s;
-      letter-spacing: 0.02em;
+      box-shadow: 0 8px 40px rgba(201,148,58,0.55), 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.25s, box-shadow 0.25s;
+      letter-spacing: 0.04em;
+      position: relative;
     }
-    .cta-btn::after { content: '→'; font-size: 18px; }
-    .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(249,115,22,0.6); }
-
-    .cta-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 28px;
-      margin-bottom: 44px;
-    }
-    .cta-list li {
-      list-style: none;
-      font-size: 14px;
-      color: rgba(255,255,255,0.8);
+    .cta-btn:hover { transform: translateY(-4px); box-shadow: 0 18px 60px rgba(201,148,58,0.65); }
+    .cta-btn-arrow {
+      width: 26px; height: 26px;
+      background: rgba(12,31,63,0.15);
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      gap: 6px;
-    }
-    .cta-list li::before {
-      content: '';
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      background: rgba(249,115,22,0.25);
-      border: 1.5px solid #f97316;
-      border-radius: 50%;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 8l3.5 3.5 6.5-7' stroke='%23f97316' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      flex-shrink: 0;
+      justify-content: center;
+      font-size: 14px;
     }
 
     /* ===== FAQ ===== */
-    .faq-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .faq-list { display: flex; flex-direction: column; gap: 14px; }
 
     .faq-item {
-      background: var(--bg-alt);
+      background: var(--white);
       border-radius: var(--radius);
       border: 1.5px solid var(--border);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.25s, box-shadow 0.25s;
     }
-    .faq-item.open { border-color: var(--teal); box-shadow: 0 4px 20px rgba(14,165,233,0.12); }
+    .faq-item.open {
+      border-color: var(--gold-line);
+      box-shadow: 0 6px 24px rgba(201,148,58,0.12);
+    }
 
     .faq-question {
       width: 100%;
       background: none;
       border: none;
-      padding: 22px 28px;
+      padding: 24px 28px;
       text-align: left;
       font-size: 15px;
       font-weight: 700;
@@ -481,191 +737,348 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
       color: var(--text);
       font-family: inherit;
       transition: background 0.15s;
+      line-height: 1.5;
     }
-    .faq-question:hover { background: #f8fafd; }
+    .faq-question:hover { background: var(--cream); }
 
     .faq-q-label {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, var(--navy), var(--navy-light));
-      color: #7dd3fc;
-      font-size: 12px;
-      font-weight: 900;
-      width: 28px;
-      height: 28px;
+      color: var(--gold-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 700;
+      width: 30px;
+      height: 30px;
       border-radius: 8px;
       flex-shrink: 0;
-      letter-spacing: 0;
     }
 
-    .faq-q-text { flex: 1; line-height: 1.6; }
+    .faq-q-text { flex: 1; }
 
     .faq-chevron {
-      width: 20px;
-      height: 20px;
+      width: 20px; height: 20px;
       flex-shrink: 0;
       transition: transform 0.3s;
       color: var(--text-light);
     }
-    .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--teal); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--gold); }
 
     .faq-answer {
       display: none;
-      padding: 0 28px 22px;
+      padding: 0 28px 22px 28px;
       font-size: 15px;
       color: var(--text-mid);
-      line-height: 1.85;
+      line-height: 1.9;
     }
-    .faq-answer.open { display: block; padding-top: 4px; }
-
-    .faq-divider {
-      height: 1px;
-      background: var(--border);
-      margin: 0 28px 18px;
-    }
+    .faq-answer.open { display: block; }
+    .faq-divider { height: 1px; background: var(--border); margin-bottom: 18px; }
 
     /* ===== FOOTER ===== */
     footer {
-      background: var(--navy);
-      color: #5a7a99;
+      background: #060f1e;
+      color: #4a5e74;
       text-align: center;
-      padding: 40px 20px;
+      padding: 52px 24px;
       font-size: 13px;
     }
-    footer strong { color: rgba(255,255,255,0.85); display: block; margin-bottom: 8px; font-size: 15px; font-weight: 800; }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+    .footer-logo span { color: var(--gold); }
+    .footer-tagline {
+      font-size: 12px;
+      color: #3a4e62;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+    .footer-copy { font-size: 12px; color: #2a3a4a; }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 640px) {
-      .profile-card { padding: 28px 22px; }
-      .profile-header { flex-direction: column; text-align: center; }
-      .profile-title { justify-content: center; }
-      .cta-btn { padding: 20px 36px; }
-      .hero-cta { padding: 18px 32px; }
-      .hero-trust { gap: 20px; }
+    @media (max-width: 680px) {
+      .section { padding: 72px 0; }
+      .profile-wrap { grid-template-columns: 1fr; }
+      .profile-photo-area { flex-direction: row; align-items: center; }
+      .profile-photo { width: 100px; height: 100px; }
+      .profile-photo-placeholder { font-size: 40px; }
+      .feature-item { grid-template-columns: 1fr; }
+      .feature-num { width: 52px; height: 52px; }
+      .hero-stat { padding: 0 20px; }
+      .cta-btn { padding: 20px 40px; }
     }
 
-    /* ===== SCROLL ANIMATION ===== */
+    @media (max-width: 480px) {
+      header { padding: 14px 16px; }
+      .hero { padding: 88px 20px 80px; }
+      .hero-stats { gap: 20px; }
+      .hero-stat { border-right: none; }
+      .flow-list::before { left: 27px; }
+    }
+
+    /* ===== ANIMATIONS ===== */
     .fade-in {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
     }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <div class="logo">20代営業転職<span>エージェント</span></div>
+    <div class="logo">
+      <div class="logo-main">COMPASS <span>Career</span></div>
+      <div class="logo-sub">Career Advisory Service</div>
+    </div>
     <a href="#FORM_URL_HERE" class="header-cta">無料相談する</a>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-badge">20代・営業職の転職専門</div>
-    <h1>
-      転職、迷ってるなら<br>
-      <span class="underline-mark">まず話して</span><span class="highlight">みてください。</span>
-    </h1>
+    <div class="hero-compass"></div>
+    <div class="hero-eyebrow">20代・営業職の転職専門エージェント</div>
+    <h1>あなたのキャリアに、<br>正しい方角を。</h1>
+    <p class="hero-catch">— COMPASS Career —</p>
     <p class="hero-sub">
-      あなたのキャリアを一緒に整理して、<br>
-      「次の一手」を見つけるお手伝いをします。
+      転職すべきか、続けるべきか。<br>
+      迷ったまま時間だけが過ぎていませんか？<br>
+      一緒に、あなただけの答えを見つけましょう。
     </p>
-    <a href="#FORM_URL_HERE" class="hero-cta">無料で転職相談を申し込む</a>
+    <div class="hero-cta-wrap">
+      <a href="#FORM_URL_HERE" class="hero-cta">
+        無料でキャリア相談する
+        <span class="hero-cta-arrow">→</span>
+      </a>
+    </div>
     <p class="hero-note">完全無料・オンライン対応・相談だけでもOK</p>
-    <div class="hero-trust">
-      <div class="hero-trust-item">
-        <span class="hero-trust-num">100<span>%</span></span>
-        <span class="hero-trust-label">完全無料</span>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">100<sup>%</sup></div>
+        <div class="hero-stat-label">完全無料</div>
       </div>
-      <div class="hero-trust-item">
-        <span class="hero-trust-num">2<span>年+</span></span>
-        <span class="hero-trust-label">支援実績</span>
+      <div class="hero-stat">
+        <div class="hero-stat-num">60<sup>分</sup></div>
+        <div class="hero-stat-label">丁寧な面談</div>
       </div>
-      <div class="hero-trust-item">
-        <span class="hero-trust-num">20<span>代</span></span>
-        <span class="hero-trust-label">営業職専門</span>
+      <div class="hero-stat">
+        <div class="hero-stat-num">20<sup>代</sup></div>
+        <div class="hero-stat-label">営業職専門</div>
       </div>
     </div>
   </section>
 
   <!-- TARGET -->
-  <section class="section section-alt">
+  <section class="section section--white">
     <div class="container">
-      <p class="section-eyebrow fade-in">こんな人に向いています</p>
+      <div class="eyebrow fade-in">For You</div>
       <h2 class="section-title fade-in">こんな方のお役に立てます</h2>
 
       <div class="target-grid">
-        <div class="target-card fade-in">
-          <div class="target-icon">🎯</div>
+        <div class="target-card fade-in fade-in-delay-1">
+          <span class="target-icon">🎯</span>
           <h3>20代の方</h3>
-          <p>第二新卒・社会人3〜7年目の転職をサポート</p>
+          <p>第二新卒・社会人2〜8年目。キャリアの方向性を一緒に整理します。</p>
         </div>
-        <div class="target-card fade-in">
-          <div class="target-icon">💼</div>
+        <div class="target-card fade-in fade-in-delay-2">
+          <span class="target-icon">💼</span>
           <h3>営業職の方</h3>
-          <p>営業経験を活かした転職・異職種転換どちらも対応</p>
+          <p>営業経験を活かした転職も、異業種チャレンジも、どちらも対応します。</p>
         </div>
-        <div class="target-card fade-in">
-          <div class="target-icon">🤔</div>
+        <div class="target-card fade-in fade-in-delay-3">
+          <span class="target-icon">🧭</span>
           <h3>転職を迷っている方</h3>
-          <p>「転職すべきか」の壁打ち相手としてもOK</p>
+          <p>「すべきかどうか」から一緒に考えます。転職ありきの提案はしません。</p>
         </div>
       </div>
 
       <div class="target-note fade-in">
-        「転職すると決めていなくても大丈夫です。まず現状を整理するだけでも、相談してみてください。」
+        「転職を決めていない」状態こそ、最初の相談に最適なタイミングです。まず現状を整理するだけでも、頭の中がクリアになります。
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="eyebrow fade-in">Our Approach</div>
+      <h2 class="section-title fade-in">COMPASS Careerが選ばれる3つの理由</h2>
+      <p class="section-lead fade-in">大手エージェントにはできない、候補者ファーストの支援スタイルです。</p>
+
+      <div class="features-list">
+        <div class="feature-item fade-in">
+          <div class="feature-num">
+            <div class="feature-num-inner">01</div>
+          </div>
+          <div class="feature-body">
+            <h3>中長期を見据えたキャリア支援</h3>
+            <p>「今の求人を紹介するだけ」のエージェントとは違います。3年後・5年後のあなたのキャリアを一緒に考え、今の一手を判断します。目先の年収アップより、長く充実して働けるキャリアを一緒に設計します。</p>
+          </div>
+        </div>
+        <div class="feature-item fade-in">
+          <div class="feature-num">
+            <div class="feature-num-inner">02</div>
+          </div>
+          <div class="feature-body">
+            <h3>強み・やりがいの言語化からスタート</h3>
+            <p>内部（強み・興味・やりがい）と外部（市場価値・年収相場）を総合的に分析。あなた自身も気づいていない強みを引き出し、言語化します。「自分が何をやりたいかわからない」という方ほど、変化を実感しやすいプロセスです。</p>
+          </div>
+        </div>
+        <div class="feature-item fade-in">
+          <div class="feature-num">
+            <div class="feature-num-inner">03</div>
+          </div>
+          <div class="feature-body">
+            <h3>本音で話せるエージェント</h3>
+            <p>数をこなすだけの大手エージェントとは異なり、一人ひとりに向き合います。「この転職、本当にあなたに合っているか？」を正直にお伝えする。押し付けではなく、一緒に答えを見つけるスタイルです。</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PROFILE -->
-  <section class="section">
+  <section class="section section--white">
     <div class="container">
-      <p class="section-eyebrow fade-in">自己紹介</p>
-      <h2 class="section-title fade-in">担当者のキャリア</h2>
+      <div class="eyebrow fade-in">Adviser Profile</div>
+      <h2 class="section-title fade-in">担当者について</h2>
 
-      <div class="profile-card fade-in">
-        <div class="profile-header">
-          <div class="profile-avatar">👤</div>
-          <div>
-            <div class="profile-name">キャリアアドバイザー</div>
-            <div class="profile-title">人材紹介 / 転職支援 2年</div>
+      <div class="profile-wrap fade-in">
+        <div class="profile-photo-area">
+          <div class="profile-photo">
+            <img src="photo.jpg" alt="T.Matsuda" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="profile-photo-placeholder" style="display:none;">👤</div>
           </div>
+          <div class="profile-badge">COMPASS Career 代表</div>
         </div>
 
-        <ul class="career-timeline">
-          <li>
-            <span class="career-label">STEP 1</span>
-            <div class="career-title">税関勤務</div>
-            <div class="career-desc">公的機関でのキャリアスタート。組織のルールや仕組みを徹底的に学ぶ。</div>
-          </li>
-          <li>
-            <span class="career-label">STEP 2</span>
-            <div class="career-title">派遣営業</div>
-            <div class="career-desc">人と仕事をマッチングする営業職を経験。求職者と企業、両方の視点を身につける。</div>
-          </li>
-          <li>
-            <span class="career-label">STEP 3</span>
-            <div class="career-title">インフラエンジニア</div>
-            <div class="career-desc">未経験からIT業界へ転身。自分自身も異業種転職を経験済み。</div>
-          </li>
-          <li>
-            <span class="career-label">STEP 4</span>
-            <div class="career-title">人材紹介（現在・2年）</div>
-            <div class="career-desc">20代・営業職を中心とした転職支援に特化。リアルな転職市場を熟知。</div>
-          </li>
-        </ul>
+        <div class="profile-info">
+          <h3>T.Matsuda</h3>
+          <div class="profile-title">キャリアアドバイザー / COMPASS Career 代表</div>
 
-        <div class="profile-message">
-          私自身も転職を経験しており、「転職を迷う気持ち」はよくわかります。<br>
-          正解を押し付けるのではなく、あなた自身が納得できるキャリアを一緒に考えることを大切にしています。
+          <div class="story-block">
+            <div class="story-item">
+              <span class="story-period">税関・2年</span>
+              <p>田舎育ちで世間知らずだった私は、「公務員がかっこいい」という理由だけで税関に就職。安定はあったものの、自分が本当にやりたいことへの疑問が消えませんでした。</p>
+            </div>
+            <div class="story-item">
+              <span class="story-period">派遣営業・2年</span>
+              <p>「やりがいが欲しい」と転職した派遣営業。やりがいは感じられず退職したものの、<strong>目標を追う面白さ、チームで働く喜び、営業の基礎</strong>を身につけた大切な経験でした。</p>
+            </div>
+            <div class="story-item">
+              <span class="story-period">エンジニア・2年</span>
+              <p>「市場価値を上げたい」という理由だけでIT業界へ転身。ストレスでハゲが20箇所できるほど追い詰められました。この経験が、<strong>「キャリア迷子を救いたい」</strong>という想いの原点です。</p>
+            </div>
+            <div class="story-item">
+              <span class="story-period">人材紹介・現在</span>
+              <p>天職だと確信しています。ただ大手エージェントの現場で「数をこなすだけ、候補者ファーストじゃない」現実も目の当たりにしました。<strong>だから、自分でやることにしました。</strong></p>
+            </div>
+          </div>
+
+          <div class="profile-message">
+            「転職を迷う気持ち」は、誰よりもわかります。私自身がキャリア迷子でした。正解を押し付けるのではなく、あなた自身が心から納得できる選択を一緒に見つけること——それが COMPASS Career の存在意義です。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="eyebrow fade-in">Case Study</div>
+      <h2 class="section-title fade-in">支援事例</h2>
+      <p class="section-lead fade-in">「強みの言語化」が、想像以上のキャリア変化を生んだ実例です。</p>
+
+      <div class="cases-grid">
+        <div class="case-card fade-in fade-in-delay-1">
+          <span class="case-tag">CASE 01</span>
+          <div class="case-transition">
+            <span class="case-from">ウエディングプランナー</span>
+            <span class="case-arrow">→</span>
+            <span class="case-to">SaaS カスタマーサクセス</span>
+          </div>
+          <p class="case-voice">接客スキルは活かしたいけど、ブライダル業界の将来が不安で…</p>
+          <p class="case-result">強みの棚卸しで「人の感情に寄り添う力」を言語化。IT業界でその強みが最大限活きるCSポジションへの転職を実現。年収・将来性ともに大幅アップ。</p>
+        </div>
+
+        <div class="case-card fade-in fade-in-delay-2">
+          <span class="case-tag">CASE 02</span>
+          <div class="case-transition">
+            <span class="case-from">証券営業</span>
+            <span class="case-arrow">→</span>
+            <span class="case-to">機械学習エンジニア</span>
+          </div>
+          <p class="case-voice">数字とロジックは好きなんですけど、営業という仕事自体がしんどくて…</p>
+          <p class="case-result">潜在的な理系思考と高い学習意欲を発見。学習ロードマップを一緒に設計し、未経験からエンジニア転職を実現。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="eyebrow fade-in">How It Works</div>
+      <h2 class="section-title fade-in">相談の流れ</h2>
+      <p class="section-lead fade-in">申込みから内定後フォローまで、一貫してサポートします。</p>
+
+      <div class="flow-list">
+        <div class="flow-item fade-in">
+          <div class="flow-num"><div class="flow-num-inner">1</div></div>
+          <div class="flow-body">
+            <div class="flow-step">Step 01</div>
+            <h3>無料相談申込み</h3>
+            <p>フォームから申込み。24時間以内に返信します。</p>
+          </div>
+        </div>
+        <div class="flow-item fade-in">
+          <div class="flow-num"><div class="flow-num-inner">2</div></div>
+          <div class="flow-body">
+            <div class="flow-step">Step 02</div>
+            <h3>オンライン面談（60分）</h3>
+            <p>キャリアの棚卸しを丁寧に行います。現状・悩み・これまでの経験を整理します。</p>
+          </div>
+        </div>
+        <div class="flow-item fade-in">
+          <div class="flow-num"><div class="flow-num-inner">3</div></div>
+          <div class="flow-body">
+            <div class="flow-step">Step 03</div>
+            <h3>強み・方向性の言語化</h3>
+            <p>内部分析（強み・やりがい）と外部分析（市場価値）を統合し、あなたの「方角」を定めます。</p>
+          </div>
+        </div>
+        <div class="flow-item fade-in">
+          <div class="flow-num"><div class="flow-num-inner">4</div></div>
+          <div class="flow-body">
+            <div class="flow-step">Step 04</div>
+            <h3>求人提案・応募サポート</h3>
+            <p>方向性に合った求人を厳選して提案。職務経歴書の添削・面接対策まで丁寧にサポートします。</p>
+          </div>
+        </div>
+        <div class="flow-item fade-in">
+          <div class="flow-num"><div class="flow-num-inner">5</div></div>
+          <div class="flow-body">
+            <div class="flow-step">Step 05</div>
+            <h3>内定・入社後フォロー</h3>
+            <p>内定後の条件交渉から、入社後の不安まで。「転職して終わり」にしないフォローを大切にしています。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -673,64 +1086,63 @@
 
   <!-- CTA -->
   <section class="cta-section">
-    <div class="container">
-      <p class="section-eyebrow fade-in" style="color:#7dd3fc; justify-content:center;">無料相談受付中</p>
-      <h2 class="section-title fade-in">まずは無料で相談してみませんか？</h2>
-      <p class="fade-in">話すだけでも、頭が整理されます。</p>
-      <ul class="cta-list fade-in">
-        <li>完全無料</li>
-        <li>オンライン対応</li>
-        <li>相談だけでもOK</li>
-        <li>押し売り一切なし</li>
-      </ul>
-      <a href="#FORM_URL_HERE" class="cta-btn fade-in">無料転職相談を申し込む</a>
+    <div class="cta-inner container">
+      <div class="eyebrow fade-in">Free Consultation</div>
+      <h2 class="section-title fade-in">まずは、話してみませんか。</h2>
+      <p class="section-lead fade-in">転職するかどうかは、相談してから決めればいい。<br>あなたのキャリアに、正しい方角を見つけましょう。</p>
+
+      <div class="cta-checks fade-in">
+        <div class="cta-check"><span class="cta-check-icon">✓</span>完全無料</div>
+        <div class="cta-check"><span class="cta-check-icon">✓</span>オンライン対応</div>
+        <div class="cta-check"><span class="cta-check-icon">✓</span>週末・夜間OK</div>
+        <div class="cta-check"><span class="cta-check-icon">✓</span>転職押し売りなし</div>
+      </div>
+
+      <a href="#FORM_URL_HERE" class="cta-btn fade-in">
+        無料でキャリア相談する
+        <span class="cta-btn-arrow">→</span>
+      </a>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section section-alt">
+  <section class="section section--cream">
     <div class="container">
-      <p class="section-eyebrow fade-in">よくある質問</p>
-      <h2 class="section-title fade-in">FAQ</h2>
+      <div class="eyebrow fade-in">FAQ</div>
+      <h2 class="section-title fade-in">よくある質問</h2>
 
       <ul class="faq-list">
         <li class="faq-item fade-in">
           <button class="faq-question" aria-expanded="false">
             <span class="faq-q-label">Q</span>
-            <span class="faq-q-text">転職するか迷っている段階でも相談できますか？</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <span class="faq-q-text">完全無料ですか？</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
             <div class="faq-divider"></div>
-            もちろんです。「転職すべきかどうか」の壁打ち相手としてのご利用も大歓迎です。現状を整理するだけでも、次のアクションが見えてきます。転職を決めてからでないと相談できない、ということは一切ありません。
+            はい。求職者の方への費用は一切かかりません。転職先が決まった場合も同様です。費用は採用企業側からいただく仕組みになっています。安心してご相談ください。
           </div>
         </li>
         <li class="faq-item fade-in">
           <button class="faq-question" aria-expanded="false">
             <span class="faq-q-label">Q</span>
-            <span class="faq-q-text">費用はかかりますか？</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <span class="faq-q-text">転職を決めていなくても相談できますか？</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
             <div class="faq-divider"></div>
-            相談・サポートは完全無料です。転職先が決まった場合でも、求職者の方からいただく費用は一切ありません。費用は採用企業側からいただく仕組みになっています。安心してご相談ください。
+            もちろんです。「迷っている」状態こそ、最初の相談に最適なタイミングです。転職ありきの提案は一切しません。まず現状を整理して、あなたにとって本当に良い選択肢を一緒に考えましょう。
           </div>
         </li>
         <li class="faq-item fade-in">
           <button class="faq-question" aria-expanded="false">
             <span class="faq-q-label">Q</span>
-            <span class="faq-q-text">営業以外の仕事に転職したいのですが、対応できますか？</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
+            <span class="faq-q-text">在職中でも相談できますか？</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
             <div class="faq-divider"></div>
-            対応可能です。私自身も営業職からエンジニアへの異業種転職を経験しており、未経験分野へのチャレンジについてもリアルな視点でお話しできます。「営業を続けるか変えるか」含めて、一緒に考えましょう。
+            はい。面談はすべてオンラインで実施しており、週末・夜間も対応しています。現職に知られることなく、安心して転職活動を進められます。
           </div>
         </li>
       </ul>
@@ -738,19 +1150,23 @@
   </section>
 
   <!-- FOOTER CTA -->
-  <section class="cta-section" style="padding: 56px 20px;">
-    <div class="container">
-      <p style="font-size: clamp(18px, 4vw, 24px); font-weight: 800; margin-bottom: 24px;">
-        転職の第一歩、一緒に踏み出しましょう。
+  <section class="cta-section" style="padding: 80px 24px;">
+    <div class="cta-inner container">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(20px,4vw,28px); color:rgba(255,255,255,0.85); margin-bottom:32px; letter-spacing:0.06em;">
+        あなたのキャリアに、正しい方角を。
       </p>
-      <a href="#FORM_URL_HERE" class="cta-btn">無料相談を申し込む（Google Forms）</a>
+      <a href="#FORM_URL_HERE" class="cta-btn">
+        無料でキャリア相談する
+        <span class="cta-btn-arrow">→</span>
+      </a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <strong>20代営業転職エージェント</strong>
-    <p>© 2026 All rights reserved.</p>
+    <div class="footer-logo">COMPASS <span>Career</span></div>
+    <div class="footer-tagline">— あなたのキャリアに、正しい方角を。—</div>
+    <div class="footer-copy">© 2026 COMPASS Career. All rights reserved.</div>
   </footer>
 
   <script>
@@ -761,14 +1177,12 @@
         const answer = item.querySelector('.faq-answer');
         const isOpen = item.classList.contains('open');
 
-        // close all
         document.querySelectorAll('.faq-item').forEach(i => {
           i.classList.remove('open');
           i.querySelector('.faq-answer').classList.remove('open');
           i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
         });
 
-        // toggle clicked
         if (!isOpen) {
           item.classList.add('open');
           answer.classList.add('open');
@@ -785,7 +1199,7 @@
           observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.10 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
